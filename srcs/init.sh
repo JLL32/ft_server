@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    init.sh                                            :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jll32 <jll32@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/12/10 17:01:05 by jll32             #+#    #+#              #
+#    Updated: 2020/12/10 17:01:06 by jll32            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #!/bin/bash
 
 ### start services
@@ -11,6 +23,7 @@ echo "CREATE DATABASE wordpress;" | mysql -u root --skip-password
 echo "GRANT ALL PRIVILEGES ON wordpress.* TO 'root'@'localhost' WITH GRANT OPTION;" | mysql -u root --skip-password
 echo "update mysql.user set plugin='mysql_native_password' where user='root';" | mysql -u root --skip-password
 echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
+mysql -u root --skip-password wordpress < wordpress.sql
 
 # calling the shell since it's interactive so that the container doesn't close
 # once the previous services/commands were done

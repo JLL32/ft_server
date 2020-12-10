@@ -1,3 +1,15 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Dockerfile                                         :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jll32 <jll32@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/12/10 17:04:26 by jll32             #+#    #+#              #
+#    Updated: 2020/12/10 17:04:27 by jll32            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 # Pulling debian buster image from docker-hub to build upon it
 FROM debian:buster
 
@@ -38,7 +50,7 @@ RUN wget https://wordpress.org/latest.tar.gz
 RUN tar -xvzf latest.tar.gz && rm -rf latest.tar.gz
 # Configuring wordpress
 COPY srcs/wp-config.php wordpress/
-
+COPY srcs/wordpress.sql wordpress/
 
 ### PhpMyAdmin
 # installing PhpMyAdmin

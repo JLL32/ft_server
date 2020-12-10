@@ -1,4 +1,16 @@
 <?php
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   config.inc.php                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jll32 <jll32@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/12/10 17:00:53 by jll32             #+#    #+#             */
+/*   Updated: 2020/12/10 17:03:18 by jll32            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 /**
  * phpMyAdmin sample configuration, you can use it as base for
  * manual configuration. For easier setup you can use setup/
