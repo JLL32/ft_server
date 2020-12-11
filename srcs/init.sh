@@ -25,6 +25,5 @@ echo "update mysql.user set plugin='mysql_native_password' where user='root';" |
 echo "FLUSH PRIVILEGES;" | mysql -u root --skip-password
 mysql -u root --skip-password wordpress < wordpress.sql
 
-# calling the shell since it's interactive so that the container doesn't close
-# once the previous services/commands were done
-bash
+# keeps logging from null device so the container can keep alive
+tail -f /dev/null
